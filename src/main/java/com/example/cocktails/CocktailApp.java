@@ -13,7 +13,7 @@ public class CocktailApp {
         Map<Integer, String> result = new TreeMap<>();
 
         // Verbindung zur SQLite-Datenbank herstellen
-        try (Connection connection = DriverManager.getConnection("jdbc:sqlite::resource:cocktails.db")) {
+        try (Connection connection = DriverManager.getConnection("jdbc:sqlite::resource:Cocktails.db")) {
             // SQL-Abfrage zum Abrufen der Cocktails
             String query = "SELECT id, name FROM cocktail";
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
